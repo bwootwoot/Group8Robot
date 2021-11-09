@@ -1,9 +1,9 @@
 #include "robot.h"
 
 void setup_robot(struct Robot *robot) {
-    robot->x = 170;
+    robot->x = 270;
     robot->y = 460;
-    robot->true_x = 170;
+    robot->true_x = 270;
     robot->true_y = 460;
     robot->width = ROBOT_WIDTH;
     robot->height = ROBOT_HEIGHT;
@@ -365,6 +365,6 @@ void robotAutoMotorMove(struct Robot * robot, int front_left_sensor, int front_r
 
     }
 
-    if (wallfollowing == 0 && front_left_sensor > 2 && front_right_sensor < front_left_sensor)
+    if (wallfollowing == 0 && front_left_sensor > 2 && front_right_sensor < front_left_sensor-1)
         wallfollowing = 1;
 }
